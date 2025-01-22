@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
 
 import { ADDUSER } from '../utils/mutations';
-import { userQuery, useMutation } from '@apollo/client';
+import { useQuery, useMutation } from '@apollo/client';
 
 import Auth from '../utils/auth';
 
