@@ -29,7 +29,8 @@ const resolvers = {
         },
 
         // Creates user and logs in after
-        addUser: async (parent, args, context) => {
+        userAdd: async (parent, args, context) => {
+            // console.log(userAdd);
             const user = await User.create(args);
             const token = signToken(user);
             return { token, user };
