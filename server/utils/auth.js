@@ -32,7 +32,7 @@ module.exports = {
       req.user = data;
     } catch {
       console.log('Invalid token');
-      return res.status(401).json({ message: 'invalid token!' });
+      // return res.status(401).json({ message: 'invalid token!' });
     }
     return req;
     },
