@@ -14,10 +14,12 @@ This application will help the user to find and keep track of the saved items in
 Front-end: 
 * React
 * HTML/CSS
+<br />
 Back-end:
 * Node.js
 * Express
 * MongoDB
+<br />
 Authentication: 
 * [JWT](https://jwt.io/)
 
