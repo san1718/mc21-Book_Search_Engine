@@ -11,17 +11,9 @@ This application will help the user to find and keep track of the saved items in
 * Remove books from the list
 
 ## Technologies Used
-Front-end: 
-* React
-* HTML/CSS
-<br />
-Back-end:
-* Node.js
-* Express
-* MongoDB
-<br />
-Authentication: 
-* [JWT](https://jwt.io/)
+* Front-end: React, HTML/CSS
+* Back-end: Node.js, Express, MongoDB
+* Authentication: [JWT](https://jwt.io/)
 
 ## Summary
 The user will be able to create an account to start interacting with their book list.
