@@ -1,4 +1,13 @@
 # Search and Save your Books
+
+## Table of Contents
+* [Overview](#overview)
+* [Features](#features)
+* [Technologies Used](#technologies-used)
+* [Summary](#summary)
+* [Links](#links)
+* [Screenshots](#screenshots)
+
 ## Overview
 The user is looking for a way to search and keep a list of books to purchase.
 The user will need to create an account or log in to start creating a list of the titles they want.
@@ -22,7 +31,7 @@ The application will help the user get the chance to save the books they desire 
 ## Links
 [Home](https://github.com/san1718/mc21-Book_Search_Engine)
 <br />
-[Deployed]()
+[Demo (Deployed)]()
 <br />
 
 ## Screenshots

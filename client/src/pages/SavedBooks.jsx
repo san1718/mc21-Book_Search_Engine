@@ -1,25 +1,24 @@
 // import { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Container, Card, Button, Row, Col } from "react-bootstrap";
-import { GET_ME } from "../utils/queries";
-import { REMOVEBOOK } from "../utils/mutations";
+import { useQuery, useMutation } from "@apollo/client";
 import Auth from "../utils/auth";
+import { QUERY_ME } from "../utils/queries";
+import { REMOVEBOOK } from "../utils/mutations";
 import { removeBookId } from "../utils/localStorage";
-import { useMutation, useQuery } from "@apollo/client";
 
 const SavedBooks = () => {
-  const { loading, data } = useQuery({ GET_ME });
-  const [removeBook, { error }] = useMutation(REMOVEBOOK);
-
-  // if data isn't here yet, say so
-  if (!userDataLength) {
-    return <h2>LOADING...</h2>;
-  }
+  const { loading, data, error: userError } = useQuery(QUERY_ME);
+  const [removeBook, { error: bookError }] = useMutation(REMOVEBOOK, {
+    refetchQueries: [QUERY_ME, "me"],
+  });
   // Checking if data is available
-  const userData = data?.me || {};
+  const userData = data?.me || [];
 
   // create function that accepts the book's mongo _id value as param and deletes the book from the database
   const handleDeleteBook = async (bookId) => {
     const token = Auth.loggedIn() ? Auth.getToken() : null;
+    console.log("Token: ", token);
 
     if (!token) {
       return false;
@@ -27,17 +26,23 @@ const SavedBooks = () => {
 
     try {
       // Waits for data to remove book from list
-      const { data } = await removeBook({ 
-        variables: { bookId },
-      });
-      // Updates user data from response
-      setUserData(data.removeBook);
-      // Removes book id from localStorage
+      const { data, error } = await removeBook({ variables: { bookId } });
+      console.log(error);
+      // upon success, remove book id from localStorage
       removeBookId(bookId);
     } catch (err) {
       console.error(err);
     }
   };
+
+  // if data isn't here yet, say so
+  if (loading) {
+    return <h2>LOADING...</h2>;
+  }
+  if (userError) {
+    console.log(userError);
+    return <h2>Error loading your saved books. Please try again later.</h2>;
+  }
 
   return (
     <>

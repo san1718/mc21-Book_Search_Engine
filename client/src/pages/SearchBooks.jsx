@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import { Container, Col, Form, Button, Card, Row } from "react-bootstrap";
-
+import { useQuery, useMutation } from '@apollo/client';
 import Auth from "../utils/auth";
 import { searchGoogleBooks } from "../utils/API";
 import { saveBookIds, getSavedBookIds } from "../utils/localStorage";
-import { useMutation } from '@apollo/client';
 import { SAVEBOOK } from '../utils/mutations';
+import { QUERY_ME } from "../utils/queries";
 
 const SearchBooks = () => {
   // create state for holding returned google api data
@@ -16,7 +16,9 @@ const SearchBooks = () => {
   // create state to hold saved bookId values
   const [savedBookIds, setSavedBookIds] = useState(getSavedBookIds());
 
-  const [saveBook] = useMutation(SAVEBOOK);
+  const [saveBook] = useMutation(SAVEBOOK, {
+    refetchQueries: [QUERY_ME, "me"],
+  });
 
   // set up useEffect hook to save `savedBookIds` list to localStorage on component unmount
   // learn more here: https://reactjs.org/docs/hooks-effect.html#effects-with-cleanup
@@ -31,7 +33,7 @@ const SearchBooks = () => {
     if (!searchInput) {
       return false;
     }
-
+    setSavedBookIds([]);
     try {
       const response = await searchGoogleBooks(searchInput);
 
