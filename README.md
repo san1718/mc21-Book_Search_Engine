@@ -4,6 +4,7 @@
 * [Overview](#overview)
 * [Features](#features)
 * [Technologies Used](#technologies-used)
+* [Installation / Usage](#installation--usage)
 * [Summary](#summary)
 * [Links](#links)
 * [Screenshots](#screenshots)
