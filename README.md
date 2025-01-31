@@ -24,6 +24,16 @@ This application will help the user to find and keep track of the saved items in
 * Back-end: Node.js, Express, MongoDB
 * Authentication: [JWT](https://jwt.io/)
 
+## Installation / Usage
+1. Clone Repository:
+    * git clone git@github.com:san1718/mc21-Book_Search_Engine.git
+2. Install Dependencies:
+    * cd server
+    * npm install
+3. Run Application Locally:
+    * npm run develop
+4. Open browser and navigate to http://localhost:3000
+
 ## Summary
 The user will be able to create an account to start interacting with their book list.
 The application will help the user get the chance to save the books they desire in their list.
