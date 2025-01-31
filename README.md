@@ -37,5 +37,5 @@ The application will help the user get the chance to save the books they desire 
 ## Screenshots
 <img width="1000" alt="Homepage" src="https://github.com/san1718/mc21-Book_Search_Engine/blob/main/images/Homepage.png">
 <img width="1000" alt="LogIn" src="https://github.com/san1718/mc21-Book_Search_Engine/blob/main/images/SignUpLogIn.png">
-<img width="1000" alt="SaveBook" src="">
-<img width="1000" alt="DeleteBook" src="">
+<img width="1000" alt="SaveBook" src="https://github.com/san1718/mc21-Book_Search_Engine/blob/main/images/SavedBooks.png">
+<img width="1000" alt="DeleteBook" src="https://github.com/san1718/mc21-Book_Search_Engine/blob/main/images/DeleteBooks.png">
