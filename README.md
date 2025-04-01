@@ -12,11 +12,9 @@
 - [Screenshots](#screenshots)
 
 ## Overview
-
 **Book Search & Save** is a web application designed for book lovers who want to discover new books and keep track of the ones they wish to purchase. Users can create an account, search for books, and save them to a personal list for easy access. The app integrates with the Google Books API to provide a wide selection of books, complete with detailed descriptions, images, and direct links for purchase.
 
 ## Features
-
 ✅ User authentication (Sign Up / Log In)  
 ✅ Search for books using keywords  
 ✅ Save books to a personal list  
@@ -24,7 +22,6 @@
 ✅ View book details including title, author, description, and cover image
 
 ## Technologies Used
-
 - **Front-end:** React, HTML, CSS
 - **Back-end:** Node.js, Express, MongoDB
 - **GraphQL API:** Apollo Server, @apollo/client
@@ -32,27 +29,22 @@
 - **API:** Google Books API
 
 ## Installation & Usage
-
 ### 1️. Clone Repository
-
 ```sh
 git clone git@github.com:san1718/mc21-Book_Search_Engine.git
 ```
 
 ### 2. Navigate to folder
-
 ```bash
 cd mc21-Book_Search_Engine
 ```
 
 ### 3. Install Dependencies
-
 ```sh
 npm run install
 ```
 
 ### 4. Run the Application Locally
-
 ```sh
 npm run develop
 ```
